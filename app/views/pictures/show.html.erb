@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @picture.title %>
+</p>
+
+<%= image_tag @picture.photo_file.url, :width => '200px' %>
+<br>
+
+<%= link_to 'Edit', edit_picture_path(@picture) %> |
+<%= link_to 'pictures index', pictures_path %>
