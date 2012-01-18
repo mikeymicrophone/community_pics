@@ -7,5 +7,12 @@
 <%= image_tag @picture.photo_file.url, :width => '200px' %>
 <br>
 
+<p>
+  <b><%= pluralize @picture.tags.count, 'tag' %></b><br>
+  <% @picture.tags.each do |tag| %>
+    <%= link_to tag.name, tag %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_picture_path(@picture) %> |
 <%= link_to 'pictures index', pictures_path %>
