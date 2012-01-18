@@ -14,5 +14,13 @@
   <% end %>
 </p>
 
+<div>
+  <%= form_for @picture.taggings.new do |f| %>
+    <%= f.select :tag_id, options_from_collection_for_select(Tag.all, :id, :name) %>
+    <%= f.hidden_field :picture_id %>
+    <%= submit_tag 'Add tag' %>
+  <% end %>
+  <%= link_to 'new tag', new_tag_path %>
+</div>
 <%= link_to 'Edit', edit_picture_path(@picture) %> |
 <%= link_to 'pictures index', pictures_path %>
