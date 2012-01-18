@@ -24,7 +24,7 @@ class PicturesController < ApplicationController
   # GET /pictures/new
   # GET /pictures/new.json
   def new
-    @picture = Picture.new :title => 'Enter title here'
+    @picture = Picture.new
 
     respond_to do |format|
       format.html # new.html.erb

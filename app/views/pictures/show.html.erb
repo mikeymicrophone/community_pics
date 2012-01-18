@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
-  <%= @picture.title %>
+  <b><%= @picture.title %></b>
 </p>
 
 <%= image_tag @picture.photo_file.url, :width => '200px' %>

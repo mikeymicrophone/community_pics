@@ -1,23 +1,14 @@
 <h1>Community Pics</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @pictures.each do |picture| %>
-  <tr>
-	<td><%#= image_tag picture.photo_file.url, :size => '120x80',
-	 :style => "border:1px solid black", :'data-class_session' => 'week 2' %></td>
-	
-    <td><%= link_to(image_tag(picture.photo_file.url, {:size => '120x80', :style => "border:1px solid black", :'data-class_session' => 'week 2'}), picture) %></td>
-    <td><%= link_to('Edit', edit_picture_path(picture)) %></td>
-  </tr>
+  <div>
+    <div>
+      <%= picture.title %>
+      <%= link_to('(edit)', edit_picture_path(picture)) %>
+    </div>
+    <%= link_to(image_tag(picture.photo_file.url, {:width => 120, :style => "border:1px solid black", :'data-class_session' => 'week 2'}), picture) %>
+  </div>
 <% end %>
-</table>
 
 <br />
 
