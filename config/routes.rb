@@ -1,4 +1,6 @@
 CommunityPics::Application.routes.draw do
+  resources :tags
+
   resources :pictures
 
   # The priority is based upon order of creation:
