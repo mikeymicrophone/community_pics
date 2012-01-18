@@ -1,0 +1,25 @@
+<%= form_for(@tagging) do |f| %>
+  <% if @tagging.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tagging.errors.count, "error") %> prohibited this tagging from being saved:</h2>
+
+      <ul>
+      <% @tagging.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tag_id %><br />
+    <%= f.select :tag_id, options_from_collection_for_select(Tag.all, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= f.label :picture_id %><br />
+    <%= f.select :picture_id, options_from_collection_for_select(Picture.all, :id, :title) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

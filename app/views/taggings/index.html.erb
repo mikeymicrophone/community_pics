@@ -1,0 +1,25 @@
+<h1>Listing taggings</h1>
+
+<table>
+  <tr>
+    <th>Tag</th>
+    <th>Picture</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @taggings.each do |tagging| %>
+  <tr>
+    <td><%= tagging.tag.name %></td>
+    <td><%= tagging.picture.title %></td>
+    <td><%= link_to 'Show', tagging %></td>
+    <td><%= link_to 'Edit', edit_tagging_path(tagging) %></td>
+    <td><%= link_to 'Destroy', tagging, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tagging', new_tagging_path %>

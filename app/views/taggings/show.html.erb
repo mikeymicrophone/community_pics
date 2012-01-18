@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tag:</b>
+  <%= @tagging.tag.name %>
+</p>
+
+<p>
+  <b>Picture:</b>
+  <%= @tagging.picture.title %>
+</p>
+
+
+<%= link_to 'Edit', edit_tagging_path(@tagging) %> |
+<%= link_to 'Back', taggings_path %>
