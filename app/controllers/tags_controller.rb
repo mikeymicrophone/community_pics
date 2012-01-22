@@ -32,11 +32,6 @@ class TagsController < ApplicationController
     end
   end
 
-  # GET /tags/1/edit
-  def edit
-    @tag = Tag.find(params[:id])
-  end
-
   # POST /tags
   # POST /tags.json
   def create
@@ -48,22 +43,6 @@ class TagsController < ApplicationController
         format.json { render json: @tag, status: :created, location: @tag }
       else
         format.html { render action: "new" }
-        format.json { render json: @tag.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PUT /tags/1
-  # PUT /tags/1.json
-  def update
-    @tag = Tag.find(params[:id])
-
-    respond_to do |format|
-      if @tag.update_attributes(params[:tag])
-        format.html { redirect_to @tag, notice: 'Tag was successfully updated.' }
-        format.json { head :ok }
-      else
-        format.html { render action: "edit" }
         format.json { render json: @tag.errors, status: :unprocessable_entity }
       end
     end
