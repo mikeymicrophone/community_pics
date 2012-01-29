@@ -1,4 +1,6 @@
 CommunityPics::Application.routes.draw do
+  devise_for :users
+
   resources :listed_pictures do
     member do
       put :move_up
