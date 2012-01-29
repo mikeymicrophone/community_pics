@@ -1,5 +1,9 @@
 CommunityPics::Application.routes.draw do
-  devise_for :users
+  devise_for :users do
+    match 'logout' => 'devise/sessions#destroy', :as => 'logout'
+  end
+  
+  match 'facebook_login' => 'facebook#facebook_login'
 
   resources :listed_pictures do
     member do

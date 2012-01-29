@@ -1,0 +1,8 @@
+development:
+  app_id: 153493074766664
+  secret: d6b13cbff91261fba5174e02d0291f08
+
+production:
+  app_id: <your application id>
+  secret: <your application secret>
+  api_key: <your application key>
