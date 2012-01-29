@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @list.name %>
+</p>
+
+<div>
+  <% @list.listed_pictures.each do |listed_picture| %>
+    <%= image_tag listed_picture.picture.photo_file.url %>
+    <%= link_to 'move up', move_up_listed_picture_path(listed_picture), :method => :put %>
+    <%= link_to 'move down', move_down_listed_picture_path(listed_picture), :method => :put %>
+  <% end %>
+</div>
+
+<%= link_to 'add picture to list', new_listed_picture_path(:listed_picture => {:list_id => @list.id}) %>
+
+<%= link_to 'Edit', edit_list_path(@list) %> |
+<%= link_to 'Back', lists_path %>
