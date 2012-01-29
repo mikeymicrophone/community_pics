@@ -1,4 +1,13 @@
 CommunityPics::Application.routes.draw do
+  resources :listed_pictures do
+    member do
+      put :move_up
+      put :move_down
+    end
+  end
+
+  resources :lists
+
   resources :taggings
 
   resources :tags

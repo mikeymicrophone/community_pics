@@ -7,6 +7,7 @@ gem 'rails', '3.1.3'
 
 gem 'sqlite3'
 gem 'carrierwave'
+gem 'acts_as_list'
 # gem 'mini_magick'
 
 
