@@ -10,6 +10,7 @@ gem 'acts_as_list'
 gem 'kaminari'
 gem 'devise'
 gem 'facebooker2'
+gem 'andand'
 
 # gem 'mini_magick'
 
@@ -37,7 +38,8 @@ gem 'jquery-rails'
 gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :development do
-  gem 'sqlite3'
+  # gem 'sqlite3'
+  gem 'mysql2'
 end
 
 group :production do
