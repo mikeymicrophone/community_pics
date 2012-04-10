@@ -1,0 +1,2 @@
+module ListedPicturesHelper
+end

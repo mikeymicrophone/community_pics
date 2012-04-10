@@ -29,6 +29,7 @@ GEM
       activesupport (= 3.1.3)
     activesupport (3.1.3)
       multi_json (~> 1.0)
+    acts_as_list (0.1.4)
     ansi (1.4.1)
     arel (2.2.1)
     builder (3.0.0)
@@ -112,6 +113,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_list
   carrierwave
   coffee-rails (~> 3.1.1)
   jquery-rails

@@ -1,0 +1,3 @@
+$('#picture_display').append('<%= escape_javascript render(@listed_picture, :locals => {:final_score => '42-32'}) %>');
+
+$('#new_listed_picture').replaceWith('<%= escape_javascript render(:partial => 'listed_picture_form') %>');

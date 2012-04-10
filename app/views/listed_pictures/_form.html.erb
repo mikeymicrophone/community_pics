@@ -1,0 +1,25 @@
+<%= form_for(@listed_picture) do |f| %>
+  <% if @listed_picture.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@listed_picture.errors.count, "error") %> prohibited this listed_picture from being saved:</h2>
+
+      <ul>
+      <% @listed_picture.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :list %><br />
+    <%= f.select :list_id, options_from_collection_for_select(List.all, :id, :name, @listed_picture.list_id), :include_blank => 'Please select your list' %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br />
+    <%= f.select :picture_id, options_from_collection_for_select(Picture.all, :id, :title, @listed_picture.picture_id) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

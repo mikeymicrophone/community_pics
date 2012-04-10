@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>List:</b>
+  <%= link_to @listed_picture.list.name, @listed_picture.list %>
+</p>
+
+<p>
+  <b>Picture:</b>
+  <%= link_to @listed_picture.picture.title, @listed_picture.picture %>
+</p>
+
+
+<%= link_to 'Edit', edit_listed_picture_path(@listed_picture) %> |
+<%= link_to 'Back', listed_pictures_path %>

@@ -1,0 +1,12 @@
+<%= form_for(@list.listed_pictures.new, :format => :js, :remote => true) do |f| %>
+  <div class="field">
+    <%= f.hidden_field :list_id, :value => @list.id %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br />
+    <%= f.select :picture_id, options_from_collection_for_select(Picture.not_in_list(@list), :id, :title) %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Add picture to list' %>
+  </div>
+<% end %>
