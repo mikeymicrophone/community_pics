@@ -1,9 +1,5 @@
 class PicturesOnListsAreOrdered < ActiveRecord::Migration
-  def up
+  def change
     add_column :listed_pictures, :position, :integer
-  end
-
-  def down
-    remove_column :listed_pictures, :position
   end
 end

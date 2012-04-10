@@ -1,8 +1,5 @@
 class PictureHasPhotoFile < ActiveRecord::Migration
-  def up
+  def change
     add_column :pictures, :photo_file, :string
-  end
-
-  def down
   end
 end
