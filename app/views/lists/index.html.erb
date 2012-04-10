@@ -3,11 +3,15 @@
 <table>
   <tr>
     <th>Name</th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @lists.each do |list| %>
   <tr>
     <td><%= link_to list.name, list %></td>
+    <td><%= link_to 'Edit', edit_list_path(list) %></td>
+    <td><%= link_to 'Destroy', list, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

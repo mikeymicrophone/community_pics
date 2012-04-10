@@ -5,7 +5,7 @@ class ListedPicturesController < ApplicationController
     @listed_pictures = ListedPicture.all
 
     respond_to do |format|
-      format.html
+      format.html # index.html.erb
       format.json { render json: @listed_pictures }
     end
   end
