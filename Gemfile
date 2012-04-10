@@ -8,6 +8,8 @@ gem 'rails', '3.1.3'
 gem 'carrierwave'
 gem 'acts_as_list'
 gem 'kaminari'
+gem 'devise'
+gem 'facebooker2'
 # gem 'mini_magick'
 
 
