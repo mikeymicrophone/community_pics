@@ -1,0 +1,29 @@
+<h2>Sign in</h2>
+<%= fb_connect_async_js %>
+
+<% if current_facebook_user %>
+  <%= current_facebook_user.fetch %>
+  <%= "Welcome #{current_facebook_user.first_name} #{current_facebook_user.last_name}!" %>
+  or 
+  <%= "Hello #{fb_name(current_facebook_user, :useyou => false)}!".html_safe %>
+  <%= fb_logout_link("Logout of fb", request.url) %><br />
+<% else %>
+  <%= fb_login_and_redirect('http://4i34.localtunnel.com/facebook_login', :scope => 'email,user_birthday') %>
+<% end %>
+
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+  <% end -%>
+
+  <div><%= f.submit "Sign in" %></div>
+<% end %>
+
+<%= render "links" %>

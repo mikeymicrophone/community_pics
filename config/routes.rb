@@ -1,4 +1,8 @@
 CommunityPics::Application.routes.draw do
+  devise_for :users do
+    match 'logout' => 'devise/sessions#destroy', :as => 'logout'
+  end
+  
   resources :listed_pictures do
     member do
       put :move_up
