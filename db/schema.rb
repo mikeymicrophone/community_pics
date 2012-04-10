@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(:version => 20120129212446) do
     t.string   "authentication_token"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "facebook_id"
   end
 
   add_index "users", ["authentication_token"], :name => "index_users_on_authentication_token", :unique => true
