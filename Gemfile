@@ -6,6 +6,7 @@ gem 'rails', '3.1.3'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'carrierwave'
+gem 'fog'
 gem 'acts_as_list'
 gem 'kaminari'
 gem 'devise'
