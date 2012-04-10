@@ -1,0 +1,23 @@
+nav {
+  float: left;
+  padding-left: 100px;
+}
+
+nav ul {
+  width: 20%;
+}
+
+nav ul li {
+  text-transform: uppercase;
+}
+
+nav ul li a {
+  font-family: Trebuchet MS;
+  text-decoration: none;
+}
+
+#main_content {
+  width: 50%;
+  padding-left: 100px;
+  display: inline-block;
+}
