@@ -1,4 +1,6 @@
 CommunityPics::Application.routes.draw do
+  resources :notes
+
   devise_for :users do
     match 'logout' => 'devise/sessions#destroy', :as => 'logout'
   end

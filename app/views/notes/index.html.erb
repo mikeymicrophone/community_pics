@@ -1,0 +1,16 @@
+<h1>Notes</h1>
+
+<div id="notes">
+  <%= render @notes %>
+</div>
+<%= paginate @notes %>
+
+<br />
+
+<%= form_for Note.new, :remote => true do |f| %>
+  <%= f.text_area :text, :size => '60x5' %>
+  <%= f.submit "Add this note" %>
+<% end %>
+
+
+<%= link_to 'New Note page', new_note_path %>

@@ -1,0 +1,10 @@
+<p>
+  <b><%= @note.text %></b>
+</p>
+
+<p>
+  <%= @note.user.andand.email %>
+</p>
+
+
+<%= link_to 'edit', edit_note_path(@note) %>

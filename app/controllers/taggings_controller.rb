@@ -49,7 +49,7 @@ class TaggingsController < ApplicationController
     
     respond_to do |format|
       if @tags_saved
-        format.html { redirect_to @tagging.picture, notice: 'Tagging was successfully created.' }
+        format.html { redirect_to @tagging.picture, notice: 'Tagged.' }
         format.json { render json: @tagging, status: :created, location: @tagging }
       else
         format.html { render action: "new" }
