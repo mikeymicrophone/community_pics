@@ -52,11 +52,22 @@ GEM
       railties (~> 3.1)
       warden (~> 1.1.1)
     erubis (2.7.0)
+    excon (0.6.3)
     execjs (1.3.0)
       multi_json (~> 1.0)
     facebooker2 (0.0.12)
       mogli (>= 0.0.12)
       ruby-hmac
+    fog (0.8.2)
+      builder
+      excon (~> 0.6.1)
+      formatador (>= 0.1.3)
+      json
+      mime-types
+      net-ssh (>= 2.1.3)
+      nokogiri (>= 1.4.4)
+      ruby-hmac
+    formatador (0.1.4)
     hashie (1.0.0)
     hike (1.2.1)
     httparty (0.8.1)
@@ -84,6 +95,8 @@ GEM
     multi_json (1.2.0)
     multi_xml (0.4.2)
     mysql2 (0.3.11)
+    net-ssh (2.1.4)
+    nokogiri (1.4.5)
     orm_adapter (0.0.7)
     pg (0.13.2)
     polyglot (0.3.3)
@@ -159,6 +172,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.1)
   devise
   facebooker2
+  fog
   jquery-rails
   kaminari
   mysql2
