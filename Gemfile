@@ -35,11 +35,11 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :development do
   # gem 'sqlite3'
   gem 'mysql2'
+  gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 group :production do
