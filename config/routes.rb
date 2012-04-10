@@ -1,9 +1,22 @@
 CommunityPics::Application.routes.draw do
+  resources :listed_pictures do
+    member do
+      put :move_up
+      put :move_down
+    end
+  end
+
+  resources :lists
+
   resources :taggings
 
   resources :tags
 
-  resources :pictures
+  resources :pictures do
+    collection do
+      get 'fresh'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

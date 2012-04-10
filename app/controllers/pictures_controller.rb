@@ -2,12 +2,17 @@ class PicturesController < ApplicationController
   # GET /pictures
   # GET /pictures.json
   def index
-    @pictures = Picture.all
+    @pictures = Picture.page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @pictures }
     end
+  end
+  
+  def fresh
+    @pictures = Picture.fresh.page(params[:page])
+    render :action => 'index'
   end
 
   # GET /pictures/1
