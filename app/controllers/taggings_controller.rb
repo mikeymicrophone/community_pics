@@ -40,30 +40,19 @@ class TaggingsController < ApplicationController
   # POST /taggings
   # POST /taggings.json
   def create
-    @tagging = Tagging.new(params[:tagging])
-
+    params[:tag_names].split(',').each do |name|
+      @tag = Tag.find_or_create_by_name name.strip
+      @tagging = Tagging.new(params[:tagging])
+      @tagging.tag = @tag
+      @tags_saved = @tagging.save
+    end
+    
     respond_to do |format|
-      if @tagging.save
-        format.html { redirect_to @tagging, notice: 'Tagging was successfully created.' }
+      if @tags_saved
+        format.html { redirect_to @tagging.picture, notice: 'Tagging was successfully created.' }
         format.json { render json: @tagging, status: :created, location: @tagging }
       else
         format.html { render action: "new" }
-        format.json { render json: @tagging.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PUT /taggings/1
-  # PUT /taggings/1.json
-  def update
-    @tagging = Tagging.find(params[:id])
-
-    respond_to do |format|
-      if @tagging.update_attributes(params[:tagging])
-        format.html { redirect_to @tagging, notice: 'Tagging was successfully updated.' }
-        format.json { head :ok }
-      else
-        format.html { render action: "edit" }
         format.json { render json: @tagging.errors, status: :unprocessable_entity }
       end
     end
