@@ -6,7 +6,7 @@
   <%= "Welcome #{current_facebook_user.first_name} #{current_facebook_user.last_name}!" %>
   or 
   <%= "Hello #{fb_name(current_facebook_user, :useyou => false)}!".html_safe %>
-  <%= fb_logout_link("Logout of fb", request.url) %><br />
+  <%#= fb_logout_link("Logout of fb", request.url) %><br />
 <% else %>
   <%#= fb_login_and_redirect('http://3dqy.localtunnel.com/facebook_login', :scope => 'email,user_birthday') %>
 <% end %>

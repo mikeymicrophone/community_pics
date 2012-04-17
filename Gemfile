@@ -12,6 +12,7 @@ gem 'kaminari'
 gem 'devise'
 gem 'facebooker2'
 gem 'andand'
+gem 'RedCloth'
 
 # gem 'mini_magick'
 

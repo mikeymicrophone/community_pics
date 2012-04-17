@@ -1,4 +1,3 @@
 <%= div_for note do %>
-  <%= note.text %>
-  <%= link_to note.id, note %>
+  <%= link_to note.id, note %>:  <%= textilize(note.text).html_safe %>
 <% end %>
