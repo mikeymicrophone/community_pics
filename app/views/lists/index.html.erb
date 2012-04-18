@@ -1,17 +1,11 @@
-<h1>Listing lists</h1>
+<h1>All of the lists</h1>
 
 <table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-  </tr>
 
 <% @lists.each do |list| %>
   <tr>
     <td><%= link_to list.name, list %></td>
-    <td><%= link_to 'Edit', edit_list_path(list) %></td>
-    <td><%= link_to 'Destroy', list, confirm: 'Are you sure?', method: :delete %></td>
+	<td><%= link_to(list.user.email, user_path(list.user_id)) %></td>
   </tr>
 <% end %>
 </table>

@@ -39,13 +39,13 @@ gem 'jquery-rails'
 # To use debugger
 
 group :development do
-  # gem 'sqlite3'
-  gem 'mysql2'
+  gem 'sqlite3'
+  # gem 'mysql2'
   gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 group :production do
-  gem 'pg'
+  # gem 'pg'
 end
 
 group :test do

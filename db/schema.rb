@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120410141308) do
+ActiveRecord::Schema.define(:version => 20120417235846) do
 
   create_table "listed_pictures", :force => true do |t|
     t.integer  "list_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20120410141308) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "notes", :force => true do |t|

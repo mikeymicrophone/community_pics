@@ -1,0 +1,7 @@
+<%= @user.email %><br>
+
+This user's lists are named:<br>
+
+<% @lists.each do |list| %>
+  <%= list.name %><br>
+<% end %>
