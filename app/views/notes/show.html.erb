@@ -6,5 +6,8 @@
   <%= @note.user.andand.email %>
 </p>
 
+<% @note.comments.each do |comment| %>
+  <li><%= comment.text %></li>
+<% end %>
 
 <%= link_to 'edit', edit_note_path(@note) %>

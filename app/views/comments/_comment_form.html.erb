@@ -1,0 +1,5 @@
+<%= form_for Comment.new do |f| %>
+  <%= f.text_area :text, :size => '30x3' %>
+  <%= f.hidden_field :note_id, :value => params[:note_id] %>
+  <%= f.submit 'Submit' %>
+<% end %>

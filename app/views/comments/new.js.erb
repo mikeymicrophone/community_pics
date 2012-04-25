@@ -1,0 +1,3 @@
+$('#comment_form_spot_' + <%= params[:note_id] %>).append('<%= escape_javascript render('comment_form') %>');
+
+$('#comment_link_for_' + <%= params[:note_id] %>).hide();

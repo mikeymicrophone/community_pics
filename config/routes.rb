@@ -1,4 +1,6 @@
 CommunityPics::Application.routes.draw do
+  resources :comments
+
   resources :notes
 
   devise_for :users do

@@ -1,3 +1,7 @@
 <%= div_for note do %>
   <%= link_to note.id, note %>:  <%= textilize(note.text).html_safe %>
+
+  <%= link_to 'comment now!', new_comment_path(:note_id => note.id), :remote => true, :id => "comment_link_for_#{ note.id }" %>
+  <div id="comment_form_spot_<%= note.id %>">
+  </div>
 <% end %>
