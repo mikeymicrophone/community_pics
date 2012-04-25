@@ -9,7 +9,7 @@
   <%= render @list.listed_pictures %>
 </div>
 
-<%= render :partial => 'listed_pictures/listed_picture_form' %>
+<%#= render :partial => 'listed_pictures/listed_picture_form' %>
 
 <%= link_to 'add picture to list', new_listed_picture_path(:listed_picture => {:list_id => @list.id}) %>
 

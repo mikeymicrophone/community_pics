@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120425002001) do
+ActiveRecord::Schema.define(:version => 20120425005547) do
 
   create_table "comments", :force => true do |t|
     t.text     "text"
@@ -23,14 +23,15 @@ ActiveRecord::Schema.define(:version => 20120425002001) do
 
   create_table "listed_pictures", :force => true do |t|
     t.integer  "list_id"
-    t.integer  "picture_id"
+    t.integer  "listed_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "position"
+    t.string   "listed_type"
   end
 
   add_index "listed_pictures", ["list_id"], :name => "index_listed_pictures_on_list_id"
-  add_index "listed_pictures", ["picture_id"], :name => "index_listed_pictures_on_picture_id"
+  add_index "listed_pictures", ["listed_id"], :name => "index_listed_pictures_on_picture_id"
 
   create_table "lists", :force => true do |t|
     t.string   "name"

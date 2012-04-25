@@ -1,5 +1,5 @@
 <%= div_for listed_picture do %>
-  <%= image_tag listed_picture.picture.photo_file.url %><br>
+  <%#= image_tag listed_picture.picture.photo_file.url %><%= listed_picture.listed.title %><br>
   <%= link_to 'up', move_up_listed_picture_path(listed_picture), :method => :put %>
   <%= link_to 'down', move_down_listed_picture_path(listed_picture), :method => :put %>
 <% end %>
