@@ -10,4 +10,17 @@
   <li><%= comment.text %></li>
 <% end %>
 
+<p>
+  <b><%= pluralize @note.tags.count, 'tag' %></b><br>
+  <% @note.tags.each do |tag| %>
+    <%= link_to tag.name, tag %>
+  <% end %>
+</p>
+
+<%= form_for @note.taggings.new do |f| %>
+  <%= text_field_tag :tag_names %>
+	<%= f.hidden_field :taggable_id %>
+	<%= f.hidden_field :taggable_type %>
+<% end %>
+
 <%= link_to 'edit', edit_note_path(@note) %>

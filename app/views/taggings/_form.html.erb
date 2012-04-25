@@ -15,10 +15,7 @@
     <%= f.label :tag_id %><br />
     <%= f.select :tag_id, options_from_collection_for_select(Tag.all, :id, :name) %>
   </div>
-  <div class="field">
-    <%= f.label :picture_id %><br />
-    <%= f.select :picture_id, options_from_collection_for_select(Picture.all, :id, :title) %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

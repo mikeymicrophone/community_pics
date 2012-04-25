@@ -17,7 +17,8 @@
 <div>
   <%= form_for @picture.taggings.new do |f| %>
     <%= text_field_tag :tag_names %>
-	<%= f.hidden_field :picture_id %>
+	<%= f.hidden_field :taggable_id %>
+	<%= f.hidden_field :taggable_type %>
   <% end %>
 </div>
 <%= link_to 'Edit', edit_picture_path(@picture) %> |

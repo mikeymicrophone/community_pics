@@ -1,5 +1,5 @@
 class Picture < ActiveRecord::Base
-  has_many :taggings
+  has_many :taggings, :as => :taggable
   has_many :tags, :through => :taggings
   has_many :listed_pictures
   has_many :lists, :through => :listed_pictures

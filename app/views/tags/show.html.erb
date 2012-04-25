@@ -6,9 +6,9 @@
 </p>
 
 <p>
-  <b><%= pluralize @tag.pictures.count, 'picture' %></b><br>
-  <% @tag.pictures.each do |picture| %>
-    <%= link_to picture.title, picture %>
+  <b><%= pluralize @tag.taggables.count, 'pictures and notes' %></b><br>
+  <% @tag.taggables.each do |taggable| %>
+    <%= link_to taggable.title, taggable %>
   <% end %>
 </p>
 
