@@ -21,5 +21,13 @@
 	<%= f.hidden_field :taggable_type %>
   <% end %>
 </div>
+
+<%= form_for @picture.listed_pictures.new do |f| %>
+  <%= f.select :list_id, options_from_collection_for_select(List.all, :id, :name), :include_blank => true %>
+  <%= f.submit "Add to this list" %>
+	<%= f.hidden_field :listed_id %>
+	<%= f.hidden_field :listed_type %>
+<% end %>
+
 <%= link_to 'Edit', edit_picture_path(@picture) %> |
 <%= link_to 'pictures index', pictures_path %>

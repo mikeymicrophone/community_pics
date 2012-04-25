@@ -24,8 +24,8 @@
 <% end %>
 
 <%= form_for @note.listed_pictures.new do |f| %>
-  <%= f.select :list_id, options_from_collection_for_select(List.all, :id, :name) %>
-  <%= f.submit %>
+  <%= f.select :list_id, options_from_collection_for_select(List.all, :id, :name), :include_blank => true %>
+  <%= f.submit "Add to this list" %>
 	<%= f.hidden_field :listed_id %>
 	<%= f.hidden_field :listed_type %>
 <% end %>

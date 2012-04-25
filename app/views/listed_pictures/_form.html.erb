@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :picture %><br />
-    <%= f.select :picture_id, options_from_collection_for_select(Picture.all, :id, :title, @listed_picture.picture_id) %>
+    <%= f.select :listed_id, options_from_collection_for_select((Picture.all + Note.all), :id, :title, @listed_picture.listed_id) %>
   </div>
   <div class="actions">
     <%= f.submit %>
